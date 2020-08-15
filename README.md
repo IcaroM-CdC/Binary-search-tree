@@ -4,17 +4,15 @@
     inferior ao nó raiz e todos os nós da subárvore direita possuem um valor superior ao nó
     raiz (esta é a forma padrão, podendo as subárvores serem invertidas, dependendo da 
     aplicação).
-
-    - Import a HTML file and watch it magically convert to Markdown
  
 
 ### Elementos
 
-    * Nós - são todos os itens guardados na árvore
-    * Raiz - é o nó do topo da árvore
-    * Filhos - são os nós que vem depois dos outros nós
-    * Pais - são os nós que vem antes dos outros nós
-    * Folhas - são os nós que não têm filhos, são os últimos nós da árvore
+    - Nós - são todos os itens guardados na árvore
+    - Raiz - é o nó do topo da árvore
+    - Filhos - são os nós que vem depois dos outros nós
+    - Pais - são os nós que vem antes dos outros nós
+    - Folhas - são os nós que não têm filhos, são os últimos nós da árvore
 
 ### Percusos
 
