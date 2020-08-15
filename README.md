@@ -6,7 +6,7 @@
     aplicação).
  
 
-## Elementos
+### Elementos
 
     * Nós - são todos os itens guardados na árvore
     * Raiz - é o nó do topo da árvore
@@ -14,7 +14,7 @@
     * Pais - são os nós que vem antes dos outros nós
     * Folhas - são os nós que não têm filhos, são os últimos nós da árvore
 
-## Percusos
+### Percusos
 
     Em uma árvore binária de busca podem-se fazer os três percursos que se fazem para qualquer árvore 
     binária (percursos em inordem, pré-ordem e pós-ordem). É interessante notar que, quando se faz um
