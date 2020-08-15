@@ -36,31 +36,30 @@ class CreateTree:
 
 ###################### EM CONSTRUÇÃO ##########################
 
-    def deleteNode(self, root, node):
+    def deleteNode(self, node, key):
         if (node):
 
             # Caso exista algum filho
-            if (node.right):
-                newNode = node.right
+            if (node.right == None):
+                return node.left
 
-                node = None
-                
-                self.insertNode(root, newNode)
+                print("Nó deletado com sucesso!!!")
+
+            elif (node.left == None):
+                return node.right
+
                 print("Nó deletado com sucesso!!!")
 
             # Caso existem dois filhos    
-            if (node.right and node.left):
-                newNodeRight = node.right
-                newNodeLeft = node.left
+            elif (node.right and node.left):
+                if (node.key == key):
 
-                node = None
-
-                self.insertNode(root, newNodeRight)
-                self.insertNode(root, newNodeLeft)
 
             # Caso não existam filhos
             else:
                 node = None
+
+                print("Nó deletado com sucesso!!!")
 
 #################################################################
 
