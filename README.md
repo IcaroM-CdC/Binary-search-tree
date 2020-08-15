@@ -16,7 +16,11 @@
 
 # Percusos
 
-    Em uma árvore binária de busca podem-se fazer os três percursos que se fazem para qualquer árvore binária (percursos em inordem, pré-ordem e pós-ordem). É interessante notar que, quando se faz um percurso em ordem em uma árvore binária de busca, os valores dos nós aparecem em ordem crescente. A operação "Percorre" tem como objetivo percorrer a árvore numa dada ordem, enumerando os seus nós. Quando um nó é enumerado, diz-se que ele foi "visitado".
+    Em uma árvore binária de busca podem-se fazer os três percursos que se fazem para qualquer árvore 
+    binária (percursos em inordem, pré-ordem e pós-ordem). É interessante notar que, quando se faz um
+    percurso em ordem em uma árvore binária de busca, os valores dos nós aparecem em ordem crescente. A 
+    operação "Percorre" tem como objetivo percorrer a árvore numa dada ordem, enumerando os seus nós. 
+    Quando um nó é enumerado, diz-se que ele foi "visitado". 
 
     Pré-ordem (ou profundidade):
 
