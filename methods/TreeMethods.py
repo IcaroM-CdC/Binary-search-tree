@@ -37,7 +37,7 @@ class CreateTree:
 ###################### EM CONSTRUÇÃO ##########################
 
     def deleteNode(self, node, key):
-        if (node):
+        if (node == True):
 
             # Caso exista algum filho
             if (node.right == None):
@@ -53,6 +53,13 @@ class CreateTree:
             # Caso existem dois filhos    
             elif (node.right and node.left):
                 if (node.key == key):
+                    pass
+
+                elif (node.key > key):
+                    pass
+
+                elif (node.key < key):
+                    pass
 
 
             # Caso não existam filhos
