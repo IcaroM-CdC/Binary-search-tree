@@ -4,6 +4,8 @@
     inferior ao nó raiz e todos os nós da subárvore direita possuem um valor superior ao nó
     raiz (esta é a forma padrão, podendo as subárvores serem invertidas, dependendo da 
     aplicação).
+
+    - Import a HTML file and watch it magically convert to Markdown
  
 
 ### Elementos
