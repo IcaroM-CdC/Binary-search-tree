@@ -33,42 +33,39 @@ class CreateTree:
                 self.insertNode(root.left, node)
 
     # Deletando o nó
-
-###################### EM CONSTRUÇÃO ##########################
-
     def deleteNode(self, node, key):
-        if (node == True):
 
-            # Caso exista algum filho
-            if (node.right == None):
-                return node.left
+        if (node == None):
+            return node
 
-                print("Nó deletado com sucesso!!!")
+        elif (node.key > key):
+            node.left = self.deleteNode(node.left, key)
 
+        elif (node.key < key):
+            node.right = self.deleteNode(node.right, key)
+
+        else:
+            if (node.left == None and node.right == None):
+                return None
+            
             elif (node.left == None):
                 return node.right
 
-                print("Nó deletado com sucesso!!!")
+            elif (node.right == None):
+                return node.left
 
-            # Caso existem dois filhos    
-            elif (node.right and node.left):
-                if (node.key == key):
-                    pass
-
-                elif (node.key > key):
-                    pass
-
-                elif (node.key < key):
-                    pass
-
-
-            # Caso não existam filhos
             else:
-                node = None
 
-                print("Nó deletado com sucesso!!!")
+                # Procura o menor número maior que o nó atual(Sucessor)
+                substitute = self.smallerKey(node.right)
 
-#################################################################
+                # O nó atual passa a ter o valor do seu substituto
+                node.key = substitute
+
+                # O substituto é removido do seu local de origem 
+                node.right = self.deleteNode(node.right, substitute)
+                
+        return node
 
     # Buscando um node
 
@@ -114,8 +111,8 @@ class CreateTree:
 
         while (node.right is not None):
             node = node.right
-
-        print(node.key)
+ 
+        return node.key
 
     def smallerKey(self, root):
         node = root
@@ -123,4 +120,4 @@ class CreateTree:
         while (node.left is not None):
             node = node.left
             
-        print(node.key)
+        return node.key

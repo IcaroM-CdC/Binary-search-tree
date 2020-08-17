@@ -1,5 +1,8 @@
 import os
-from methods import TreeMethods
+import sys
+sys.path.append("/home/icaro/Documentos/Python/Binary-search-tree/methods")
+import TreeMethods
+
 
 class CreateNode:
     def __init__(self, key = None):
@@ -87,7 +90,8 @@ class Menu:
             if (option == 6):
 
                 try:
-                    tree.smallerKey(root)
+                    result = tree.smallerKey(root)
+                    print(result)
                 except UnboundLocalError:
                     print("Arvore não existente")
                     os.system("sleep 5")
@@ -96,18 +100,21 @@ class Menu:
             if (option == 7):
 
                 try:
-                    tree.biggerKey(root)
+                    result = tree.biggerKey(root)
+                    print(result)
                 except UnboundLocalError:
                     print("Arvore não existente")
                     os.system("sleep 5")
                     os.system("clear")
 
-            if (option == 449849849):
+            if (option == 8):
 
                 key = int(input("Insira o valor do nó: "))
 
                 try:
-                    tree.deleteNode(root, node)
+                    tree.deleteNode(root, key)
+                    print("Nó deletado com sucesso!!!")
+
                 except UnboundLocalError:
                     print("Arvore não existente")
                     os.system("sleep 5")
