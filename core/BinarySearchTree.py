@@ -1,8 +1,8 @@
 import os
 import sys
 sys.path.append("/home/icaro/Documentos/Python/Binary-search-tree/methods")
-import TreeMethods
 
+import TreeMethods
 
 class CreateNode:
     def __init__(self, key = None):
@@ -27,11 +27,16 @@ class Menu:
             print("5 -> Retorna todos os nós")
             print("6 -> Retorna o menor elemento")
             print("7 -> Retorna o maior elemento")
+            print("8 -> Deleta um nó")
             print("9 -> Sair")
             print("********************************************")
             
+            try:
+                option = int(input())
+            except ValueError:
+                print("Comando inválido!!!")
+                os.system("sleep 1")
 
-            option = int(input())
             os.system("clear") or None
 
             tree = TreeMethods.CreateTree()
@@ -41,12 +46,20 @@ class Menu:
                 rootKey = int(input("Insira o valor da raiz da arvore: "))
                 root = CreateNode(rootKey)
 
+                print("Arvore criada com sucesso!!!")
+                os.system("sleep 2")
+                os.system("clear")
+
             if (option == 2):
 
                 key = int(input("Insira o valor do nó: "))
                 node = CreateNode(key)
                 
                 tree.insertNode(root, node)
+
+                print("Nó criado com sucesso!!!")
+                os.system("sleep 2")
+                os.system("clear")
 
             if (option == 3):
 
@@ -92,6 +105,9 @@ class Menu:
                 try:
                     result = tree.smallerKey(root)
                     print(result)
+                    os.system("sleep 5")
+                    os.system("clear")
+
                 except UnboundLocalError:
                     print("Arvore não existente")
                     os.system("sleep 5")
@@ -102,6 +118,9 @@ class Menu:
                 try:
                     result = tree.biggerKey(root)
                     print(result)
+                    os.system("sleep 5")
+                    os.system("clear")
+
                 except UnboundLocalError:
                     print("Arvore não existente")
                     os.system("sleep 5")
@@ -114,6 +133,8 @@ class Menu:
                 try:
                     tree.deleteNode(root, key)
                     print("Nó deletado com sucesso!!!")
+                    os.system("sleep 5")
+                    os.system("clear")
 
                 except UnboundLocalError:
                     print("Arvore não existente")

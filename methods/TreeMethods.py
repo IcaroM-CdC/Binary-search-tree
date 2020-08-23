@@ -3,7 +3,6 @@ class CreateTree:
         pass
 
     # Exibindo a arvore de forma ordenada
-
     def sortTree (self ,root):
         if (not root):
             return
@@ -12,8 +11,7 @@ class CreateTree:
         print(root.key)
         self.sortTree(root.left)
 
-    # Inserindo um node
-    
+    # Inserindo um no  
     def insertNode(self, root, node):
         if (root is None):
             root = node
@@ -67,8 +65,7 @@ class CreateTree:
                 
         return node
 
-    # Buscando um node
-
+    # Buscando um nó
     def searchNode(self, root, key):
 
         # Caso a chave procurada não está presente
